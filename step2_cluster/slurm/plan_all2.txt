@@ -1,0 +1,15 @@
+# Everything for the final analysis after the seed-quality run (A0f/A2f are checked separately).
+#   arm  Nmin  Nmax  R    S
+A0     20  48  100  100
+A1     20  48  100  100
+A2     20  48  100  100
+A5     20  42  100  100
+A6     27  40  100  100
+A7a    27  40  100  100
+A7b    27  40  100  100
+A0na   27  40  100  100
+A2na   27  40  100  100
+A2k    27  42  100  100
+A2m    27  42  100  100
+A3     27  42  100  100
+A8     27  42  100  100

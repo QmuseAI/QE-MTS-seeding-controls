@@ -1,0 +1,15 @@
+A0f vs A0 N=27: replicates 20 (missing 0); identical TTS 1470; censored runs consistent 530; mismatches 0; identical replicate medians 20/20
+A0f vs A0 N=28: replicates 20 (missing 0); identical TTS 1473; censored runs consistent 527; mismatches 0; identical replicate medians 20/20
+A0f vs A0 N=29: replicates 20 (missing 0); identical TTS 1488; censored runs consistent 512; mismatches 0; identical replicate medians 20/20
+A0f vs A0 N=30: replicates 20 (missing 0); identical TTS 1477; censored runs consistent 523; mismatches 0; identical replicate medians 20/20
+A0f vs A0 N=31: replicates 20 (missing 0); identical TTS 1454; censored runs consistent 546; mismatches 0; identical replicate medians 20/20
+A0f vs A0 N=32: replicates 20 (missing 0); identical TTS 1477; censored runs consistent 523; mismatches 0; identical replicate medians 20/20
+A0f vs A0 N=33: replicates 20 (missing 0); identical TTS 1455; censored runs consistent 545; mismatches 0; identical replicate medians 20/20
+A2f vs A2 N=27: replicates 20 (missing 0); identical TTS 1490; censored runs consistent 510; mismatches 0; identical replicate medians 20/20
+A2f vs A2 N=28: replicates 20 (missing 0); identical TTS 1494; censored runs consistent 506; mismatches 0; identical replicate medians 20/20
+A2f vs A2 N=29: replicates 20 (missing 0); identical TTS 1479; censored runs consistent 521; mismatches 0; identical replicate medians 20/20
+A2f vs A2 N=30: replicates 20 (missing 0); identical TTS 1480; censored runs consistent 520; mismatches 0; identical replicate medians 20/20
+A2f vs A2 N=31: replicates 20 (missing 0); identical TTS 1515; censored runs consistent 485; mismatches 0; identical replicate medians 20/20
+A2f vs A2 N=32: replicates 20 (missing 0); identical TTS 1466; censored runs consistent 534; mismatches 0; identical replicate medians 20/20
+A2f vs A2 N=33: replicates 20 (missing 0); identical TTS 1462; censored runs consistent 538; mismatches 0; identical replicate medians 20/20
+OVERALL: 28000 runs checked, 0 mismatches -> early stop is exact

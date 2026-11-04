@@ -1,0 +1,15 @@
+# Experiment plan: one line per arm.   arm  Nmin  Nmax  R(replicates)  S(seeds per replicate)
+# Paper scale is R=S=100 (their Sec. 3.3). Arms are defined in code/make_tasks.py.
+#
+# core comparison, extended on both sides of the paper's window 27-37 and past its predicted crossover N~47
+A0     20  50  100  100     # random population            (paper's MTS baseline)
+A1     20  50  100  100     # one random string  x K       (zero-information seed)
+A2     20  50  100  100     # best of 1e5 uniform x K      (paper's QE-MTS protocol, classical sampler)
+# mechanism: diversity vs seed quality
+A5     20  45  100  100     # best 100 distinct of 1e5 uniform (same budget, diverse population)
+A6     27  40  100  100     # best 100 distinct of 1e7 uniform (bigger budget, cf. paper App. D)
+A7a    27  40  100  100     # known optimum with N/4 flips x K (oracle seed, far better than any sampler)
+A7b    27  40  100  100     # known optimum with N/8 flips x K
+# implementation robustness: paper Alg. 2 printed without aspiration
+A0na   27  40  100  100
+A2na   27  40  100  100

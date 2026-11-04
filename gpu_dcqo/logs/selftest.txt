@@ -1,0 +1,38 @@
+/home/cyc/miniconda3/envs/dsbtn/lib/python3.12/site-packages/cudaq/__init__.py:260: UserWarning: cudaq-logical is in preview. Its APIs, behavior, and documentation may change substantially in upcoming versions.
+  from . import logical  # noqa: F401
+/home/cyc/software/Large_GPUs/qt_mts/gpu_dcqo/dcqo_seeds.py:144: FutureWarning: The CUDA-Q `sample` and `observe` algorithmic primitives will change in a future release. Existing code may require updates. See https://nvidia.github.io/cuda-quantum/latest/using/migration/upcoming_changes.html for details.
+  import cudaq
+   N=6 l=0.0: G2 dense 74752  Pauli 74752  rel.diff 0.0e+00
+   N=6 l=0.3: G2 dense 340019  Pauli 340019  rel.diff 3.4e-16
+   N=6 l=0.7: G2 dense 1.65852e+06  Pauli 1.65852e+06  rel.diff 2.8e-16
+   N=6 l=1.0: G2 dense 3.37101e+06  Pauli 3.37101e+06  rel.diff 0.0e+00
+   N=6: G1 dense 1984  Pauli 1984
+   N=6: exact DCQO: mean energy 11.8040 (uniform 15.0000), P(optimum) 0.6509 (uniform 0.4375)
+   N=6 cudaq sign -1 (little-endian index): total variation to exact P(E) = 7.07e-05
+   N=6 cudaq sign -1 (big-endian index): total variation to exact P(E) = 7.07e-05
+   N=6 cudaq sign +1 (little-endian index): total variation to exact P(E) = 5.47e-01
+   N=6 cudaq sign +1 (big-endian index): total variation to exact P(E) = 5.47e-01
+   -> use --sign -1
+   N=8 l=0.0: G2 dense 231424  Pauli 231424  rel.diff 0.0e+00
+   N=8 l=0.3: G2 dense 2.84373e+06  Pauli 2.84373e+06  rel.diff 0.0e+00
+   N=8 l=0.7: G2 dense 1.4886e+07  Pauli 1.4886e+07  rel.diff 1.3e-16
+   N=8 l=1.0: G2 dense 3.0337e+07  Pauli 3.0337e+07  rel.diff 0.0e+00
+   N=8: G1 dense 6016  Pauli 6016
+   N=8: exact DCQO: mean energy 19.2990 (uniform 28.0000), P(optimum) 0.1248 (uniform 0.0625)
+   N=8 cudaq sign -1 (little-endian index): total variation to exact P(E) = 1.61e-04
+   N=8 cudaq sign -1 (big-endian index): total variation to exact P(E) = 1.61e-04
+   N=8 cudaq sign +1 (little-endian index): total variation to exact P(E) = 6.64e-01
+   N=8 cudaq sign +1 (big-endian index): total variation to exact P(E) = 6.64e-01
+   -> use --sign -1
+   N=10 l=0.0: G2 dense 522240  Pauli 522240  rel.diff 0.0e+00
+   N=10 l=0.3: G2 dense 1.13051e+07  Pauli 1.13051e+07  rel.diff 0.0e+00
+   N=10 l=0.7: G2 dense 6.0204e+07  Pauli 6.0204e+07  rel.diff 1.2e-16
+   N=10 l=1.0: G2 dense 1.22769e+08  Pauli 1.22769e+08  rel.diff 0.0e+00
+   N=10: G1 dense 13440  Pauli 13440
+   N=10: exact DCQO: mean energy 29.9759 (uniform 45.0000), P(optimum) 0.1003 (uniform 0.0391)
+   N=10 cudaq sign -1 (little-endian index): total variation to exact P(E) = 6.95e-05
+   N=10 cudaq sign -1 (big-endian index): total variation to exact P(E) = 6.95e-05
+   N=10 cudaq sign +1 (little-endian index): total variation to exact P(E) = 6.78e-01
+   N=10 cudaq sign +1 (big-endian index): total variation to exact P(E) = 6.78e-01
+   -> use --sign -1
+SELFTEST OK

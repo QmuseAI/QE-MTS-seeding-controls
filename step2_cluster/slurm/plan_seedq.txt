@@ -1,0 +1,15 @@
+# Seed-quality sweep of the replicated (QE-MTS) protocol + early-stop validation (bash slurm/submit_seedq.sh).
+#   arm  Nmin  Nmax  R    S    [cap]        [kfrac]
+# Replicated seeds of increasing quality (seed energy / Eopt ~ 2.5-3.3, 1.7, 1.4-1.5, 1.1-1.4; A2 = 1e5 already done):
+A2k    27  40  100  100
+A2m    27  40  100  100
+A3     27  40  100  100
+A8     27  40  100  100
+A2k    41  42  100  100  50000000000  0.70
+A2m    41  42  100  100  50000000000  0.70
+A3     41  42  100  100  50000000000  0.70
+A8     41  42  100  100  50000000000  0.70
+# Early-stop validation: replicates 0-19 of A0 and A2 rerun WITHOUT early stop (kfrac 1); same seeds and RNG
+# streams, so every TTS that finished in the main run must be reproduced exactly (code/check_earlystop.py).
+A0f    27  33  20   100  3000000000   1.0
+A2f    27  33  20   100  3000000000   1.0

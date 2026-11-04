@@ -1,0 +1,63 @@
+N=20 len=20 E=  26 table=  26 OK
+N=21 len=21 E=  26 table=  26 OK
+N=22 len=22 E=  39 table=  39 OK
+N=23 len=23 E=  47 table=  47 OK
+N=24 len=24 E=  36 table=  36 OK
+N=25 len=25 E=  36 table=  36 OK
+N=26 len=26 E=  45 table=  45 OK
+N=27 len=27 E=  37 table=  37 OK
+N=28 len=28 E=  50 table=  50 OK
+N=29 len=29 E=  62 table=  62 OK
+N=30 len=30 E=  59 table=  59 OK
+N=31 len=31 E=  67 table=  67 OK
+N=32 len=32 E=  64 table=  64 OK
+N=33 len=33 E=  64 table=  64 OK
+N=34 len=34 E=  65 table=  65 OK
+N=35 len=35 E=  73 table=  73 OK
+N=36 len=36 E=  82 table=  82 OK
+N=37 len=37 E=  86 table=  86 OK
+N=38 len=38 E=  87 table=  87 OK
+N=39 len=39 E=  99 table=  99 OK
+N=40 len=40 E= 108 table= 108 OK
+N=41 len=41 E= 108 table= 108 OK
+N=42 len=42 E= 101 table= 101 OK
+N=43 len=43 E= 109 table= 109 OK
+N=44 len=44 E= 122 table= 122 OK
+N=45 len=45 E= 118 table= 118 OK
+N=46 len=46 E= 131 table= 131 OK
+N=47 len=47 E= 135 table= 135 OK
+N=48 len=48 E= 140 table= 140 OK
+N=49 len=49 E= 136 table= 136 OK
+N=50 len=50 E= 153 table= 153 OK
+wrote eopt_all.txt; ALL OK
+N=20: best found in 4 capped runs = 26 (table 26) OK
+N=21: best found in 4 capped runs = 26 (table 26) OK
+N=22: best found in 4 capped runs = 39 (table 39) OK
+N=23: best found in 4 capped runs = 47 (table 47) OK
+N=24: best found in 4 capped runs = 36 (table 36) OK
+N=25: best found in 4 capped runs = 36 (table 36) OK
+N=26: best found in 4 capped runs = 45 (table 45) OK
+N=27: best found in 4 capped runs = 37 (table 37) OK
+N=28: best found in 4 capped runs = 50 (table 50) OK
+N=29: best found in 4 capped runs = 62 (table 62) OK
+N=30: best found in 4 capped runs = 59 (table 59) OK
+N=31: best found in 4 capped runs = 67 (table 67) OK
+N=32: best found in 4 capped runs = 64 (table 64) OK
+N=33: best found in 4 capped runs = 64 (table 64) OK
+N=34: best found in 4 capped runs = 65 (table 65) OK
+N=35: best found in 4 capped runs = 73 (table 73) OK
+N=36: best found in 4 capped runs = 82 (table 82) OK
+N=37: best found in 4 capped runs = 86 (table 86) OK
+N=38: best found in 4 capped runs = 87 (table 87) OK
+N=39: best found in 4 capped runs = 99 (table 99) OK
+N=40: best found in 4 capped runs = 108 (table 108) OK
+N=41: best found in 4 capped runs = 112 (table 108) OK
+N=42: best found in 4 capped runs = 101 (table 101) OK
+N=43: best found in 4 capped runs = 125 (table 109) OK
+N=44: best found in 4 capped runs = 130 (table 122) OK
+N=45: best found in 4 capped runs = 118 (table 118) OK
+N=46: best found in 4 capped runs = 131 (table 131) OK
+N=47: best found in 4 capped runs = 147 (table 135) OK
+N=48: best found in 4 capped runs = 156 (table 140) OK
+N=49: best found in 4 capped runs = 160 (table 136) OK
+N=50: best found in 4 capped runs = 169 (table 153) OK

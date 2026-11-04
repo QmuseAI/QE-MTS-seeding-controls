@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.venv/
+*.o
+*.exe
+article/*.pdf
+article/article_numbers.txt
+step2_cluster/run_main/data/
+step2_cluster/run_ext/data/
+step2_cluster/seeds/seeds_*.txt

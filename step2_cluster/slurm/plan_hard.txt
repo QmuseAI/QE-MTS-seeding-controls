@@ -1,0 +1,5 @@
+# Extension run 2 (TAG=hard THREADS=32 PLANX=slurm/plan_hard.txt bash slurm/submit_ext.sh): the expensive sizes.
+# A2m (the arm that matches the published QE-MTS curve) at the published crossover region, and the optimum collector.
+# N=43 alone is about half of the cost of this file; drop it (Nmin 44) to save ~2.5 h.
+A2m       43  48  100  100  5e10
+C0        43  48   20  100  5e10

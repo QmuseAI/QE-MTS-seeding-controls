@@ -1,0 +1,12 @@
+# Everything that has been run, for the final collect + analysis after the extra run (submit_extra.sh).
+# (N values that were never run just give empty data files, which analyze.py skips.)
+#   arm  Nmin  Nmax  R    S
+A0     20  48  100  100
+A1     20  48  100  100
+A2     20  48  100  100
+A5     20  45  100  100
+A6     27  40  100  100
+A7a    27  40  100  100
+A7b    27  40  100  100
+A0na   27  40  100  100
+A2na   27  40  100  100

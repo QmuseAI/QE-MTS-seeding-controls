@@ -1,0 +1,18 @@
+{
+  "B": 2000,
+  "seed": 20261102,
+  "rng": "PCG64; SHA256-derived separate stream per arm and N; separate stream per window",
+  "python": "3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:09:58) [MSC v.1929 64 bit (AMD64)]",
+  "numpy": "2.3.5",
+  "scipy": "1.16.3",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "inputs": {
+    "step2_cluster/run_main/data.tar.gz": "b2a2b300ba2a3b659fc04e6377063e76861c4423d668bc5b89c14f601b7fb7e1",
+    "step2_cluster/run_ext/data.tar.gz": "789b6ac7a433b0b9678d4710a611bc26af2ef4fc83a410a98f85b8375ffb808f",
+    "step2_cluster/run_ext/analysis_ext/gaps_ext.csv": "8fb6a685663bb3c6ddea2ed4700e4c75b9e64f254fb9196be77ba164b0c64e96",
+    "step2_cluster/comment/out/table_gap_perN.csv": "889369c0fd6cada967a72680788bd5248458fe9984ca0cbc85a58d798b08567f",
+    "step2_cluster/code/analyze_ext.py": "466b3ab36c22c2fd49b02eecf7a2488d16954857076b546fafffeafbf4786803",
+    "step2_cluster/comment/out/comment_numbers.json": "e39c8497077337fa24806f5bdb8598f436657418c25532eb0806be2e4eea955a"
+  },
+  "script_sha256": "e6e7f62d20aff9de7fe02221ed270e7da984086e098e8b3400a24367b3c1fa9d"
+}

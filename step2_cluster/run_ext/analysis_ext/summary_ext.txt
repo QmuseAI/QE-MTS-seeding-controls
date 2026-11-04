@@ -1,0 +1,205 @@
+
+==============================================================================================================
+0. Inventory (arm: N range, replicates) and censored replicate medians
+   A0        N=20-48 (29 sizes)  R=[100]
+   A0na      N=27-40 (14 sizes)  R=[100]
+   A1        N=20-48 (29 sizes)  R=[100]
+   A2        N=20-48 (29 sizes)  R=[100]
+   A2k       N=27-42 (16 sizes)  R=[100]
+   A2m       N=27-48 (22 sizes)  R=[100]
+   A2na      N=27-40 (14 sizes)  R=[100]
+   A3        N=27-42 (16 sizes)  R=[100]
+   A5        N=20-42 (23 sizes)  R=[100]
+   A6        N=27-40 (14 sizes)  R=[100]
+   A7a       N=27-40 (14 sizes)  R=[100]
+   A7b       N=27-40 (14 sizes)  R=[100]
+   A8        N=27-42 (16 sizes)  R=[100]
+   C0        N=27-48 (22 sizes)  R=[20]
+   H0_K200   N=27-40 (14 sizes)  R=[100]
+   H0_K50    N=27-40 (14 sizes)  R=[100]
+   H0_pm2    N=27-40 (14 sizes)  R=[100]
+   H0_tb2    N=27-40 (14 sizes)  R=[100]
+   H2m_K200  N=27-40 (14 sizes)  R=[100]
+   H2m_K50   N=27-40 (14 sizes)  R=[100]
+   H2m_pm2   N=27-40 (14 sizes)  R=[100]
+   H2m_tb2   N=27-40 (14 sizes)  R=[100]
+   I0        N=27-37 (11 sizes)  R=[100]
+   I2        N=27-37 (11 sizes)  R=[100]
+   I2m       N=27-37 (11 sizes)  R=[100]
+   I3        N=27-37 (11 sizes)  R=[100]
+   M2m_k1    N=27-42 (16 sizes)  R=[100]
+   M2m_k10   N=27-42 (16 sizes)  R=[100]
+   M2m_k50   N=27-42 (16 sizes)  R=[100]
+   M3_k1     N=27-42 (16 sizes)  R=[100]
+   P2m_d4    N=27-42 (16 sizes)  R=[100]
+   P2m_d8    N=27-42 (16 sizes)  R=[100]
+   P3_d8     N=27-42 (16 sizes)  R=[100]
+   PQ1_d8    N=27-33 (7 sizes)  R=[100]
+   Q1        N=27-33 (7 sizes)  R=[100]
+   Q5        N=27-33 (7 sizes)  R=[100]
+   V0        N=27-30 (4 sizes)  R=[10]
+   V2m       N=27-30 (4 sizes)  R=[10]
+   WARNING A0 N=43: 14 of 100 replicate medians censored (Q50 exact while < 50%)
+   WARNING A1 N=43: 7 of 100 replicate medians censored (Q50 exact while < 50%)
+   WARNING A2 N=43: 10 of 100 replicate medians censored (Q50 exact while < 50%)
+   WARNING A2m N=43: 16 of 100 replicate medians censored (Q50 exact while < 50%)
+   WARNING A5 N=41: 2 of 100 replicate medians censored (Q50 exact while < 50%)
+   WARNING C0 N=43: 4 of 20 replicate medians censored (Q50 exact while < 50%)
+
+==============================================================================================================
+1. Validation: mts4 without settings must reproduce mts v3 (same seeds, same random streams)
+   V0 vs A0: 4000/4000 runs identical  -> OK
+   V2m vs A2m: 4000/4000 runs identical  -> OK
+
+==============================================================================================================
+2. Seed cost counted: T = TTS + cost of the seed (uniform samples: 1 evaluation each; A8: 1000 N moves x N evaluations)
+   (QE-MTS: the DCQO cost is 1e5 shots plus the circuit simulation and is not in objective evaluations)
+   A1        vs A0      with seed cost               mean D 27-37 +0.043 [+0.029,+0.049]  kappa ratio 0.982 [0.972,0.993]  Delta 4.22e+04 (RMS 0.018)  | mean D 38-48 (n=11) +0.012 [-0.023,+0.044]
+             N with D significantly < 0 after counting the seed: none
+   A2k       vs A0      with seed cost               mean D 27-37 +0.065 [+0.052,+0.074]  kappa ratio 0.975 [0.966,0.983]  Delta 6.54e+04 (RMS 0.016)  | mean D 38-42 (n=5) +0.011 [-0.042,+0.064]
+             N with D significantly < 0 after counting the seed: none
+   A2        vs A0      with seed cost               mean D 27-37 +0.186 [+0.177,+0.201]  kappa ratio 0.944 [0.933,0.955]  Delta 2.54e+05 (RMS 0.035)  | mean D 38-48 (n=11) +0.041 [+0.010,+0.076]
+             N with D significantly < 0 after counting the seed: none
+   A2m       vs A0      with seed cost               mean D 27-37 +0.540 [+0.531,+0.555]  kappa ratio 0.883 [0.860,0.907]  Delta 1.51e+06 (RMS 0.035)  | mean D 38-48 (n=11) +0.059 [+0.034,+0.102]
+             N with D significantly < 0 after counting the seed: none
+   A3        vs A0      with seed cost               mean D 27-37 +1.250 [+1.235,+1.270]  kappa ratio 0.938 [0.813,1.082]  Delta 1.23e+07 (RMS 0.054)  | mean D 38-42 (n=5) +0.296 [+0.268,+0.377]
+             N with D significantly < 0 after counting the seed: none
+   A8        vs A0      with seed cost               mean D 27-37 +1.122 [+0.994,+1.196]  kappa ratio 1.366 [1.022,1.827]  Delta 6.50e+06 (RMS 0.852)  | mean D 38-42 (n=5) +1.303 [+1.226,+1.345]
+             N with D significantly < 0 after counting the seed: none
+   A5        vs A0      with seed cost               mean D 27-37 +0.089 [+0.078,+0.096]  kappa ratio 0.998 [0.994,1.002]  Delta 1.06e+05 (RMS 0.007)  | mean D 38-42 (n=5) -0.003 [-0.055,+0.053]
+             N with D significantly < 0 after counting the seed: none
+   A6        vs A0      with seed cost               mean D 27-37 +1.164 [+1.156,+1.170]  kappa ratio 1.089 [1.041,1.139]  Delta 9.95e+06 (RMS 0.003)  | mean D 38-40 (n=3) +0.277 [+0.205,+0.317]
+             N with D significantly < 0 after counting the seed: none
+
+==============================================================================================================
+3. Seed properties within an arm: Spearman correlation of log10(replicate median TTS) with the seed energy and with the
+   Hamming distance of the seed to the optimum, per N, pooled as the mean over N (permutation test within N, 1000 perms)
+   A1    N=27-48: rho(TTS, seed energy) = -0.055 (p=0.009);  rho(TTS, Hamming to optimum) = +0.119 (p=0.000)
+   A2k   N=27-42: rho(TTS, seed energy) = -0.047 (p=0.070);  rho(TTS, Hamming to optimum) = +0.132 (p=0.000)
+   A2    N=27-48: rho(TTS, seed energy) = -0.161 (p=0.000);  rho(TTS, Hamming to optimum) = +0.107 (p=0.000)
+   A2m   N=27-48: rho(TTS, seed energy) = -0.250 (p=0.000);  rho(TTS, Hamming to optimum) = +0.078 (p=0.001)
+   A3    N=27-42: rho(TTS, seed energy) = -0.235 (p=0.000);  rho(TTS, Hamming to optimum) = +0.302 (p=0.000)
+   A8    N=27-42: rho(TTS, seed energy) = -0.153 (p=0.000);  rho(TTS, Hamming to optimum) = +0.285 (p=0.000)
+   Q1    N=27-33: rho(TTS, seed energy) = -0.209 (p=0.000);  rho(TTS, Hamming to optimum) = +0.320 (p=0.000)
+   (negative rho with energy = lower-energy seeds give LONGER runs inside the same arm)
+
+==============================================================================================================
+4. Odd/even hardness and the optima reached
+   A0 log10 Q50, N=27-37: odd minus even, after removing a linear trend: +0.09 dex [+0.07,+0.10]
+   A0 log10 Q50, N=38-48: odd minus even, after removing a linear trend: +1.17 dex [+1.13,+1.22]
+   D_A1 on N=38-48: odd N mean +0.019, even N mean +0.006, difference +0.012 [-0.077,+0.059]
+   D_A2 on N=38-48: odd N mean +0.060, even N mean +0.023, difference +0.037 [-0.041,+0.100]
+   D_A2m on N=38-48: odd N mean +0.059, even N mean +0.038, difference +0.021 [-0.044,+0.091]
+   N=27: 152900 optima reached, 1 distinct up to symmetry (1 skew-symmetric); P&M optimum among them; C0 class frequencies 1.00
+   N=28: 153512 optima reached, 1 distinct up to symmetry (0 skew-symmetric); P&M optimum among them; C0 class frequencies 1.00
+   N=29: 159129 optima reached, 2 distinct up to symmetry (2 skew-symmetric); P&M optimum among them; C0 class frequencies 0.83 0.17
+   N=30: 158130 optima reached, 2 distinct up to symmetry (0 skew-symmetric); P&M optimum among them; C0 class frequencies 0.63 0.37
+   N=31: 163855 optima reached, 1 distinct up to symmetry (0 skew-symmetric); P&M optimum among them; C0 class frequencies 1.00
+   N=32: 163864 optima reached, 1 distinct up to symmetry (0 skew-symmetric); P&M optimum among them; C0 class frequencies 1.00
+   N=33: 162174 optima reached, 1 distinct up to symmetry (0 skew-symmetric); P&M optimum among them; C0 class frequencies 1.00
+   N=34: 140825 optima reached, 1 distinct up to symmetry (0 skew-symmetric); P&M optimum among them; C0 class frequencies 1.00
+   N=35: 139780 optima reached, 1 distinct up to symmetry (0 skew-symmetric); P&M optimum among them; C0 class frequencies 1.00
+   N=36: 140261 optima reached, 1 distinct up to symmetry (0 skew-symmetric); P&M optimum among them; C0 class frequencies 1.00
+   N=37: 139763 optima reached, 1 distinct up to symmetry (0 skew-symmetric); P&M optimum among them; C0 class frequencies 1.00
+   N=38: 110795 optima reached, 1 distinct up to symmetry (0 skew-symmetric); P&M optimum among them; C0 class frequencies 1.00
+   N=39: 109855 optima reached, 2 distinct up to symmetry (2 skew-symmetric); P&M optimum among them; C0 class frequencies 0.55 0.45
+   N=40: 109697 optima reached, 1 distinct up to symmetry (0 skew-symmetric); P&M optimum among them; C0 class frequencies 1.00
+   N=41: 51870 optima reached, 1 distinct up to symmetry (1 skew-symmetric); P&M optimum among them; C0 class frequencies 1.00
+   N=42: 51323 optima reached, 1 distinct up to symmetry (0 skew-symmetric); P&M optimum among them; C0 class frequencies 1.00
+   N=43: 1133 optima reached, 1 distinct up to symmetry (1 skew-symmetric); P&M optimum among them; C0 class frequencies 1.00
+   N=44: 1429 optima reached, 1 distinct up to symmetry (0 skew-symmetric); P&M optimum among them; C0 class frequencies 1.00
+   N=45: 1440 optima reached, 1 distinct up to symmetry (1 skew-symmetric); P&M optimum among them; C0 class frequencies 1.00
+   N=46: 1422 optima reached, 3 distinct up to symmetry (0 skew-symmetric); P&M optimum among them; C0 class frequencies 0.46 0.42 0.13
+   N=47: 1429 optima reached, 6 distinct up to symmetry (5 skew-symmetric); P&M optimum among them; C0 class frequencies 0.26 0.22 0.14 0.14 0.13 0.12
+   N=48: 1452 optima reached, 1 distinct up to symmetry (0 skew-symmetric); P&M optimum among them; C0 class frequencies 1.00
+   (number of classes is a lower bound on the degeneracy; compare with the list of Packebusch & Mertens 2016)
+
+==============================================================================================================
+5. How to use a seed. A2m seed: k copies + (100-k) random strings (k=100 is A2m), and 100 copies each with d random flips
+   A2m       vs A0      k=100 (published protocol)   mean D 27-37 +0.285 [+0.270,+0.311]  kappa ratio 0.883 [0.860,0.907]  Delta 4.67e+05 (RMS 0.074)  | mean D 38-42 (n=5) +0.074 [+0.023,+0.142]
+   M2m_k50   vs A0      k=50                         mean D 27-37 +0.193 [+0.176,+0.210]  kappa ratio 0.913 [0.889,0.937]  Delta 2.57e+05 (RMS 0.083)  | mean D 38-42 (n=5) +0.029 [-0.014,+0.102]
+   M2m_k10   vs A0      k=10                         mean D 27-37 +0.010 [+0.002,+0.023]  kappa ratio 0.999 [0.992,1.006]  Delta 6.95e+03 (RMS 0.014)  | mean D 38-42 (n=5) +0.015 [-0.040,+0.069]
+   M2m_k1    vs A0      k=1                          mean D 27-37 +0.008 [-0.003,+0.015]  kappa ratio 1.001 [0.995,1.006]  Delta 3.86e+03 (RMS 0.012)  | mean D 38-42 (n=5) +0.004 [-0.053,+0.059]
+   P2m_d8    vs A0      copies + round(N/8) flips    mean D 27-37 +0.041 [+0.028,+0.050]  kappa ratio 0.983 [0.976,0.989]  Delta 3.65e+04 (RMS 0.022)  | mean D 38-42 (n=5) -0.006 [-0.056,+0.057]
+   P2m_d4    vs A0      copies + round(N/4) flips    mean D 27-37 +0.007 [-0.006,+0.014]  kappa ratio 0.996 [0.991,1.002]  Delta 6.79e+03 (RMS 0.010)  | mean D 38-42 (n=5) +0.003 [-0.048,+0.054]
+   A3        vs A0      A3 seed, k=100               mean D 27-37 +0.538 [+0.484,+0.583]  kappa ratio 0.938 [0.813,1.082]  Delta 1.14e+06 (RMS 0.343)  | mean D 38-42 (n=5) +0.169 [+0.143,+0.263]
+   M3_k1     vs A0      A3 seed, k=1                 mean D 27-37 -0.010 [-0.025,-0.004]  kappa ratio 1.008 [0.998,1.018]  Delta 1.00e+00 (RMS 0.023)  | mean D 38-42 (n=5) -0.003 [-0.050,+0.060]
+   P3_d8     vs A0      A3 seed, copies + N/8 flips  mean D 27-37 +0.038 [+0.009,+0.052]  kappa ratio 1.010 [0.976,1.045]  Delta 7.94e+03 (RMS 0.074)  | mean D 38-42 (n=5) +0.026 [-0.031,+0.075]
+   with the seed cost counted:
+   A2m       vs A0      + seed cost                  mean D 27-37 +0.540 [+0.532,+0.556]  kappa ratio 0.883 [0.860,0.907]  Delta 1.51e+06 (RMS 0.035)  | mean D 38-42 (n=5) +0.096 [+0.050,+0.164]
+   M2m_k1    vs A0      + seed cost                  mean D 27-37 +0.432 [+0.423,+0.439]  kappa ratio 1.001 [0.995,1.006]  Delta 1.01e+06 (RMS 0.006)  | mean D 38-42 (n=5) +0.030 [-0.022,+0.081]
+   P2m_d8    vs A0      + seed cost                  mean D 27-37 +0.442 [+0.433,+0.449]  kappa ratio 0.983 [0.976,0.989]  Delta 1.05e+06 (RMS 0.008)  | mean D 38-42 (n=5) +0.020 [-0.030,+0.081]
+   A3        vs A0      + seed cost                  mean D 27-37 +1.250 [+1.237,+1.270]  kappa ratio 0.938 [0.813,1.082]  Delta 1.23e+07 (RMS 0.054)  | mean D 38-42 (n=5) +0.296 [+0.265,+0.375]
+   M3_k1     vs A0      + seed cost                  mean D 27-37 +1.165 [+1.158,+1.172]  kappa ratio 1.008 [0.998,1.018]  Delta 9.99e+06 (RMS 0.001)  | mean D 38-42 (n=5) +0.165 [+0.121,+0.223]
+   P3_d8     vs A0      + seed cost                  mean D 27-37 +1.171 [+1.163,+1.178]  kappa ratio 1.010 [0.976,1.045]  Delta 1.01e+07 (RMS 0.006)  | mean D 38-42 (n=5) +0.188 [+0.134,+0.235]
+
+==============================================================================================================
+6. MTS hyperparameters: replicated A2m seed vs random population with the SAME settings
+   A2m       vs A0      default (K=100, p=1/N, tabu x1) mean D 27-37 +0.285 [+0.270,+0.311]  kappa ratio 0.883 [0.860,0.907]  Delta 4.67e+05 (RMS 0.074)  | mean D 38-40 (n=3) +0.069 [+0.015,+0.144]
+   H2m_K50   vs H0_K50  K=50                         mean D 27-37 +0.272 [+0.258,+0.318]  kappa ratio 0.911 [0.887,0.935]  Delta 3.93e+05 (RMS 0.118)  | mean D 38-40 (n=3) +0.026 [-0.012,+0.094]
+   H2m_K200  vs H0_K200 K=200                        mean D 27-37 +0.351 [+0.332,+0.370]  kappa ratio 0.865 [0.835,0.897]  Delta 6.56e+05 (RMS 0.073)  | mean D 38-40 (n=3) +0.034 [+0.021,+0.059]
+   H2m_pm2   vs H0_pm2  p_mut=2/N                    mean D 27-37 +0.145 [+0.133,+0.156]  kappa ratio 0.933 [0.911,0.955]  Delta 1.88e+05 (RMS 0.024)  | mean D 38-40 (n=3) +0.017 [-0.002,+0.034]
+   H2m_tb2   vs H0_tb2  tabu length x2               mean D 27-37 +0.104 [+0.090,+0.117]  kappa ratio 0.962 [0.941,0.984]  Delta 1.11e+05 (RMS 0.034)  | mean D 38-40 (n=3) +0.004 [-0.008,+0.029]
+   efficiency of the settings themselves (random population vs default MTS):
+   H0_K50    vs A0                                   mean D 27-37 +0.223 [+0.202,+0.237]  kappa ratio 1.187 [1.087,1.295]  Delta 3.27e+04 (RMS 0.359)  | mean D 38-40 (n=3) +0.940 [+0.874,+0.982]
+   H0_K200   vs A0                                   mean D 27-37 -0.009 [-0.019,+0.000]  kappa ratio 0.993 [0.986,1.000]  Delta 1.00e+00 (RMS 0.019)  | mean D 38-40 (n=3) -0.245 [-0.298,-0.204]
+   H0_pm2    vs A0                                   mean D 27-37 -0.001 [-0.011,+0.007]  kappa ratio 1.003 [0.996,1.010]  Delta 1.00e+00 (RMS 0.013)  | mean D 38-40 (n=3) -0.254 [-0.299,-0.208]
+   H0_tb2    vs A0                                   mean D 27-37 +0.001 [-0.008,+0.011]  kappa ratio 1.014 [0.995,1.033]  Delta 1.00e+00 (RMS 0.039)  | mean D 38-40 (n=3) -0.231 [-0.281,-0.194]
+
+==============================================================================================================
+7. Population-free iterated tabu search (ITS): seeded start vs random start
+   I2        vs I0      A2 seed                      mean D 27-37 +0.000 [-0.011,+0.011]  kappa ratio 0.996 [0.990,1.003]  Delta 9.27e+02 (RMS 0.013)
+   I2m       vs I0      A2m seed                     mean D 27-37 +0.002 [-0.011,+0.012]  kappa ratio 0.996 [0.990,1.002]  Delta 2.98e+03 (RMS 0.012)
+   I3        vs I0      A3 seed                      mean D 27-37 -0.014 [-0.032,+0.000]  kappa ratio 1.017 [0.981,1.055]  Delta 1.00e+00 (RMS 0.071)
+   ITS (random start) vs MTS:
+   I0        vs A0                                   mean D 27-37 +0.204 [+0.192,+0.214]  kappa ratio 1.118 [1.025,1.220]  Delta 7.92e+04 (RMS 0.288)
+
+==============================================================================================================
+8. A2m up to N=48: the classical arm that reproduces the published curve, at the published crossover
+   A2: Q50 lines fitted on N=27-37 cross at N=37.1
+      N=38: predicted -0.022, measured +0.028 [-0.003,+0.068]
+      N=39: predicted -0.048, measured +0.068 [-0.118,+0.262]
+      N=40: predicted -0.073, measured +0.028 [-0.019,+0.089]
+      N=41: predicted -0.098, measured +0.047 [-0.021,+0.130]
+      N=42: predicted -0.123, measured +0.084 [-0.062,+0.306]
+      N=43: predicted -0.149, measured +0.051 [-0.052,+0.101]
+      N=44: predicted -0.174, measured -0.013 [-0.112,+0.100]
+      N=45: predicted -0.199, measured +0.022 [-0.108,+0.112]
+      N=46: predicted -0.224, measured -0.011 [-0.059,+0.053]
+      N=47: predicted -0.250, measured +0.110 [-0.018,+0.268]
+      N=48: predicted -0.275, measured +0.021 [-0.043,+0.071]
+      mean D over N=38-48 (n=11): +0.040 [+0.009,+0.076], P(mean<=0)=0.007
+   A2m: Q50 lines fitted on N=27-37 cross at N=37.3
+      N=38: predicted -0.038, measured +0.049 [+0.010,+0.090]
+      N=39: predicted -0.092, measured +0.120 [-0.060,+0.305]
+      N=40: predicted -0.146, measured +0.037 [+0.005,+0.114]
+      N=41: predicted -0.200, measured +0.042 [-0.020,+0.141]
+      N=42: predicted -0.254, measured +0.120 [-0.071,+0.309]
+      N=43: predicted -0.308, measured +0.035 [-0.052,+0.107]
+      N=44: predicted -0.362, measured -0.013 [-0.099,+0.108]
+      N=45: predicted -0.416, measured +0.050 [-0.068,+0.163]
+      N=46: predicted -0.469, measured +0.016 [-0.041,+0.089]
+      N=47: predicted -0.523, measured +0.049 [-0.068,+0.243]
+      N=48: predicted -0.577, measured +0.018 [-0.048,+0.073]
+      mean D over N=38-48 (n=11): +0.048 [+0.022,+0.092], P(mean<=0)=0.002
+
+==============================================================================================================
+9. DCQO seeds (QE-MTS protocol with real DCQO samples)
+   Q1        vs A0      best of 1e5 DCQO shots x100  mean D 27-37 +0.526 [+0.471,+0.562]  kappa ratio 1.010 [0.800,1.275]  Delta 6.74e+05 (RMS 0.261)
+   Q5        vs A0      100 best distinct DCQO shots mean D 27-37 -0.015 [-0.043,-0.012]  kappa ratio 1.018 [0.997,1.039]  Delta 1.00e+00 (RMS 0.026)
+   PQ1_d8    vs A0      DCQO seed, copies + N/8 flips mean D 27-37 +0.054 [+0.031,+0.064]  kappa ratio 0.993 [0.948,1.040]  Delta 2.91e+04 (RMS 0.047)
+   A2k : seed energy / Eopt (mean, N=27-33) 2.524;  Hamming to optimum 11.24
+   A2  : seed energy / Eopt (mean, N=27-33) 1.761;  Hamming to optimum 11.28
+   A2m : seed energy / Eopt (mean, N=27-33) 1.498;  Hamming to optimum 10.85
+   A3  : seed energy / Eopt (mean, N=27-33) 1.267;  Hamming to optimum 9.48
+   Q1  : seed energy / Eopt (mean, N=27-33) 1.364;  Hamming to optimum 10.42
+   DCQO seed quality = best of n uniform samples with n ~ N27:2.1e+06  N28:3.6e+06  N29:2.9e+06  N30:4.0e+06  N31:4.0e+06  N32:5.1e+06  N33:6.5e+06  (clipped to 1e3-1e7)
+   Q1 vs published QE-MTS gap on N=27-33: RMS 0.266 dex, r=+0.20, mean D +0.526 vs published +0.334
+   overhead vs seed energy (N=27-33) for all replicated seeds:
+      A1   E/Eopt 7.71  Delta 4.20e+04
+      A2k  E/Eopt 2.52  Delta 6.37e+04
+      A2   E/Eopt 1.76  Delta 1.47e+05
+      A2m  E/Eopt 1.50  Delta 4.58e+05
+      A3   E/Eopt 1.27  Delta 9.59e+05
+      A8   E/Eopt 1.16  Delta 1.03e+06
+      Q1   E/Eopt 1.36  Delta 6.74e+05

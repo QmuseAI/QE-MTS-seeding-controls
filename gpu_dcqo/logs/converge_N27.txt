@@ -1,0 +1,12 @@
+/home/cyc/miniconda3/envs/dsbtn/lib/python3.12/site-packages/cudaq/__init__.py:260: UserWarning: cudaq-logical is in preview. Its APIs, behavior, and documentation may change substantially in upcoming versions.
+  from . import logical  # noqa: F401
+/home/cyc/software/Large_GPUs/qt_mts/gpu_dcqo/dcqo_seeds.py:144: FutureWarning: The CUDA-Q `sample` and `observe` algorithmic primitives will change in a future release. Existing code may require updates. See https://nvidia.github.io/cuda-quantum/latest/using/migration/upcoming_changes.html for details.
+  import cudaq
+N=27: 5850 Pauli terms in G, Theta = -0.000967744  (1.7 s)
+N=27 steps=  1: mean shot energy 5.9545 Eopt, mean of best 0.1% 2.1957 Eopt  (9 s)
+N=27 steps=  2: mean shot energy 5.8763 Eopt, mean of best 0.1% 2.1903 Eopt  (18 s)
+N=27 steps=  4: mean shot energy 5.8310 Eopt, mean of best 0.1% 2.1784 Eopt  (35 s)
+N=27 steps=  8: mean shot energy 5.8354 Eopt, mean of best 0.1% 2.1935 Eopt  (69 s)
+N=27 steps= 16: mean shot energy 5.8394 Eopt, mean of best 0.1% 2.2168 Eopt  (139 s)
+N=27 steps= 32: mean shot energy 5.8368 Eopt, mean of best 0.1% 2.1951 Eopt  (277 s)
+choose the smallest number of steps after which both numbers stop changing (to ~0.5%)

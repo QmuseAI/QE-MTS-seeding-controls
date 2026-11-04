@@ -1,0 +1,18 @@
+date: 2026-10-20T15:44:21-03:00
+host: n013
+slurm job: 10149
+uname: Linux n013 5.15.0-191-generic #201-Ubuntu SMP Fri Aug 7 18:39:04 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux
+CPU(s):                                  512
+Model name:                              AMD EPYC 9754 128-Core Processor
+Thread(s) per core:                      2
+Socket(s):                               2
+gcc: gcc (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0  flags: -O3 -march=native
+python: Python 3.11.17  numpy: 2.4.6  scipy: 1.17.1
+sha256:
+b40edd2c480d86deb1a33aae8ca2d3bef42e34a8dc4765b0da081485372a99bb  mts.c
+16167685ddc2a55a919773a80e2ef419a6b1a39c4f45351d62274b35f36d5181  mts
+fd8edf55683ba448cd2e5e7600db38e3a6e1fad9b23d2921e8fbd9aedda5d735  labs_common.py
+422bba7734c56ff0c9fc4acef8c5929816fd3159cac364174e853feadc74412b  seeds.py
+5c727ba743f8a73e0c65d8348d79f65c4ced5b812d2453f5f73409e0ca584459  make_tasks.py
+d176a7866e37d62a8ccd30d5378e034d23ea559b52f54caa63705da37dc25db1  analyze.py
+26436a92353000f47c5cfd725b986d0c306a5007cf2402b464419311b6323487  /fasthome/yaocheng/software/Quantum/qe_mts/step2_cluster/slurm/plan.txt

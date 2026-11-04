@@ -1,0 +1,5 @@
+# Extension run 3 (after gpu/dcqo_seeds.py; TAG=dcqo PLANX=slurm/plan_dcqo.txt bash slurm/submit_ext.sh).
+# Set Nmax to the largest N for which seeds_Q1_N<N>.txt / seeds_Q5_N<N>.txt were copied into seeds/.
+Q1        27  33  100  100
+Q5        27  33  100  100
+PQ1_d8    27  33  100  100

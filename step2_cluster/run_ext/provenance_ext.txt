@@ -1,0 +1,24 @@
+date: 2026-10-23T02:17:11-03:00  host: n013  plan: /fasthome/yaocheng/software/Quantum/qe_mts/step2_cluster/slurm/plan_hard.txt  tag: hard
+date: 2026-10-23T02:17:11-03:00  host: n013  plan: /fasthome/yaocheng/software/Quantum/qe_mts/step2_cluster/slurm/plan_ext.txt  tag: ext
+gcc: gcc (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0
+cef782df0473c31885cc408331905cd28709d9324c6bde2f3a9cc88d929a0f4f  mts.c
+b1b895ceafc0e010db43105516081915cebf4a2cee9e7a0bf7d31f21a92e01d4  mts4.c
+c75599118bc4d33c4e4d9c68cf4647813989475874f89d16790748dc46ef56ab  mts4
+8b54c053ab261c8b51fccc347e068fca4aad1678002be4e2f88c2af31bd9d99e  make_tasks_ext.py
+f30697d9dde7c4bf40edae5b0d4c4dae1adfa8815d6eb7acd6112f09cd007811  seeds.py
+8897ad5673e746d6d259775c692812c01baffaebd3ca8e7aecd965603420d018  /fasthome/yaocheng/software/Quantum/qe_mts/step2_cluster/slurm/plan_hard.txt
+gcc: gcc (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0
+cef782df0473c31885cc408331905cd28709d9324c6bde2f3a9cc88d929a0f4f  mts.c
+b1b895ceafc0e010db43105516081915cebf4a2cee9e7a0bf7d31f21a92e01d4  mts4.c
+c75599118bc4d33c4e4d9c68cf4647813989475874f89d16790748dc46ef56ab  mts4
+8b54c053ab261c8b51fccc347e068fca4aad1678002be4e2f88c2af31bd9d99e  make_tasks_ext.py
+f30697d9dde7c4bf40edae5b0d4c4dae1adfa8815d6eb7acd6112f09cd007811  seeds.py
+f764076f06a159fbd5b3fe68a39a6fbae5f6a43dd561762ddb9e745502ee3136  /fasthome/yaocheng/software/Quantum/qe_mts/step2_cluster/slurm/plan_ext.txt
+date: 2026-10-23T19:29:31-03:00  host: n013  plan: /fasthome/yaocheng/software/Quantum/qe_mts/step2_cluster/slurm/plan_dcqo.txt  tag: dcqo
+gcc: gcc (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0
+cef782df0473c31885cc408331905cd28709d9324c6bde2f3a9cc88d929a0f4f  mts.c
+b1b895ceafc0e010db43105516081915cebf4a2cee9e7a0bf7d31f21a92e01d4  mts4.c
+c75599118bc4d33c4e4d9c68cf4647813989475874f89d16790748dc46ef56ab  mts4
+8b54c053ab261c8b51fccc347e068fca4aad1678002be4e2f88c2af31bd9d99e  make_tasks_ext.py
+f30697d9dde7c4bf40edae5b0d4c4dae1adfa8815d6eb7acd6112f09cd007811  seeds.py
+0ab674fdede5f440398f16d4d5c31834d77498ee12c7b831b75205f19a40084d  /fasthome/yaocheng/software/Quantum/qe_mts/step2_cluster/slurm/plan_dcqo.txt

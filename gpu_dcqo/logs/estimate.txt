@@ -1,0 +1,8 @@
+/home/cyc/miniconda3/envs/dsbtn/lib/python3.12/site-packages/cudaq/__init__.py:260: UserWarning: cudaq-logical is in preview. Its APIs, behavior, and documentation may change substantially in upcoming versions.
+  from . import logical  # noqa: F401
+/home/cyc/software/Large_GPUs/qt_mts/gpu_dcqo/dcqo_seeds.py:144: FutureWarning: The CUDA-Q `sample` and `observe` algorithmic primitives will change in a future release. Existing code may require updates. See https://nvidia.github.io/cuda-quantum/latest/using/migration/upcoming_changes.html for details.
+  import cudaq
+N=27: 5850 terms, ~1.5 ms per term -> 0.1 min per Trotter step (x number of steps; plus a few seconds of sampling)
+N=29: 7308 terms, ~5.9 ms per term -> 0.7 min per Trotter step (x number of steps; plus a few seconds of sampling)
+N=31: 8990 terms, ~23.5 ms per term -> 3.5 min per Trotter step (x number of steps; plus a few seconds of sampling)
+N=33: 10912 terms, ~93.9 ms per term -> 17.1 min per Trotter step (x number of steps; plus a few seconds of sampling)

@@ -1,0 +1,74 @@
+============================================================================================
+A. Sanity check: OLS on the digitised Q0.50 markers, window 27-37 (paper: QE-MTS 1.24, MTS 1.37)
+   QE-MTS  kappa = 1.236   OLS 95% CI [1.162, 1.314]   R2 = 0.871
+   MTS     kappa = 1.366   OLS 95% CI [1.244, 1.500]   R2 = 0.864
+   (paper's bootstrap CIs [1.23,1.25] / [1.36,1.37] ignore N-to-N lack of fit; R2 0.86-0.89 / 0.85-0.87)
+
+============================================================================================
+B. Window sensitivity (OLS on Q0.50; ratio = kappa_QE/kappa_MTS from paired fit of Fig.5 medians)
+  window  n |      kappa QE [95% CI] |     kappa MTS [95% CI] |    ratio (Fig5) [95% CI]       p | N_cross
+27-37    11 | 1.236 [1.162,1.314]   | 1.366 [1.244,1.500]   | 0.9102 [0.8762,0.9454] 0.000334 |    37.9
+28-37    10 | 1.276 [1.206,1.350]   | 1.431 [1.310,1.564]   | 0.8969 [0.8609,0.9345] 0.000283 |    37.4
+29-37     9 | 1.295 [1.210,1.386]   | 1.460 [1.309,1.628]   | 0.8862 [0.8442,0.9302] 0.000605 |    37.1
+30-37     8 | 1.328 [1.227,1.436]   | 1.510 [1.323,1.723]   | 0.8772 [0.8244,0.9333] 0.00207 |    36.9
+31-37     7 | 1.312 [1.177,1.462]   | 1.488 [1.237,1.788]   | 0.8802 [0.8067,0.9603]  0.0131 |    36.9
+32-37     6 | 1.255 [1.101,1.430]   | 1.351 [1.132,1.612]   | 0.9285 [0.8789,0.9810]    0.02 |    38.1
+33-37     5 | 1.169 [1.042,1.313]   | 1.220 [1.082,1.377]   | 0.9603 [0.9427,0.9782] 0.00603 |    40.1
+27-31     5 | 0.996 [0.860,1.154]   | 0.974 [0.807,1.176]   | 1.0501 [1.0215,1.0795]  0.0111 |   never
+27-32     6 | 1.070 [0.928,1.233]   | 1.115 [0.876,1.419]   | 0.9798 [0.8757,1.0962]    0.64 |    71.0
+32-36     5 | 1.272 [1.015,1.595]   | 1.391 [1.031,1.875]   | 0.9115 [0.8406,0.9885]  0.0358 |    37.2
+
+   Drop N=28,30,31 (MTS anomalously fast there in Fig.2), window 27-37 otherwise:
+     QE-MTS  kappa = 1.207 [1.139,1.279]  R2=0.913
+     MTS     kappa = 1.315 [1.217,1.422]  R2=0.925
+     ratio (Fig5) = 0.9207 [0.8964,0.9457]  N_cross = 37.9
+
+============================================================================================
+C. Shape of the gap D(N) = log10(TTS_QE/TTS_MTS)  (least squares, Gaussian residuals, AICc)
+  data: Fig.5 bootstrap medians (vector, precise)
+    M1 linear: D=a+b(N-27)                     k=2  RMS=0.0692  dAICc=  2.43   a=0.446, b=-0.0409, N_cross=37.9
+    M2 overhead: D=log10(1+R*rho^(N-27))       k=2  RMS=0.0793  dAICc=  5.43   R=1.88, rho=0.817, N_cross=inf
+    M4 two-level step (breakpoint fitted)      k=3  RMS=0.0489  dAICc=  0.00   break_at=33, level_low_N=0.368, level_high_N=0.0905, N_cross=inf
+  data: Fig.2 Q0.50 markers (raster)
+    M1 linear: D=a+b(N-27)                     k=2  RMS=0.0633  dAICc=  0.65   a=0.471, b=-0.0436, N_cross=37.8
+    M2 overhead: D=log10(1+R*rho^(N-27))       k=2  RMS=0.0732  dAICc=  3.85   R=2.09, rho=0.807, N_cross=inf
+    M4 two-level step (breakpoint fitted)      k=3  RMS=0.0484  dAICc=  0.00   break_at=32, level_low_N=0.41, level_high_N=0.122, N_cross=inf
+
+  Fig.5 medians, N=32-37: slope of D = -0.0322 /N  [-0.0561,-0.0083],  mean D = +0.116  -> TTS_QE/TTS_MTS = 1.31x;  linear extrapolation hits 0 at N = 38.1
+  Fig.5 medians, N=33-37: slope of D = -0.0176 /N  [-0.0256,-0.0096],  mean D = +0.090  -> TTS_QE/TTS_MTS = 1.23x;  linear extrapolation hits 0 at N = 40.1
+
+  Fig.5 per-N: median D, KDE-body area with D<0, lowest bootstrap draw:
+    N=27: median +0.351   P_body(D<0) = 0.00   min -0.05
+    N=28: median +0.381   P_body(D<0) = 0.00   min -0.06
+    N=29: median +0.383   P_body(D<0) = 0.00   min -0.44
+    N=30: median +0.403   P_body(D<0) = 0.00   min -0.27
+    N=31: median +0.446   P_body(D<0) = 0.00   min +0.01
+    N=32: median +0.245   P_body(D<0) = 0.03   min -0.48
+    N=33: median +0.132   P_body(D<0) = 0.07   min -0.52
+    N=34: median +0.108   P_body(D<0) = 0.14   min -0.80
+    N=35: median +0.081   P_body(D<0) = 0.24   min -1.23
+    N=36: median +0.070   P_body(D<0) = 0.27   min -1.06
+    N=37: median +0.062   P_body(D<0) = 0.29   min -1.16
+
+============================================================================================
+D. Tail of the gap, N=33-37 only: two 2-parameter models that both fit 5 points, very different futures
+   linear   D = 0.1257 -0.0176(N-33)         RMS 0.0062   -> D=0 at N = 40.1
+   geometric D = 0.1303 * 0.816^(N-33)    RMS 0.0035   -> D>0 for all N (overhead-type)
+   predicted D (log10 TTS_QE/TTS_MTS):
+     N    linear   geometric
+     38  +0.038    +0.047
+     39  +0.020    +0.038
+     40  +0.002    +0.031
+     41  -0.015    +0.026
+     42  -0.033    +0.021
+     43  -0.050    +0.017
+     44  -0.068    +0.014
+     45  -0.086    +0.011
+     46  -0.103    +0.009
+     47  -0.121    +0.008
+   -> the two hypotheses differ by >=0.05 dex from N~42 and ~0.1 dex by N~45, i.e. testable at or below the paper's N_x=47.
+
+============================================================================================
+E. Extrapolation to N=47 (paper's crossover) from Q0.50 fits:
+   window 27-37: log10 Q50(47)  QE-MTS 7.62  MTS 8.02   D(47) = -0.40
+   window 33-37: log10 Q50(47)  QE-MTS 7.38  MTS 7.51   D(47) = -0.13

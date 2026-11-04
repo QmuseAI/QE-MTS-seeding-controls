@@ -1,0 +1,1 @@
+{"N": 30, "n_terms_G": 8120, "n_terms_Hf": 2135, "G1": 499520.0, "G2_0": 19819520.0, "G2_1": 40231804928.0, "G2_cross": 0.0, "Theta": -0.000878701633673719, "seconds": 3.0, "sim_seconds": 7657, "steps": 8, "sign": -1.0, "shots_per_replicate": 100000, "R": 100, "mean_energy_over_Eopt": 4.495873450847458, "P_opt": 8e-07, "Q1_seed_E_over_Eopt": 1.3010169491525425}

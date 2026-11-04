@@ -1,0 +1,29 @@
+# Extension run 1 (bash slurm/submit_ext.sh): everything at N <= 42.   arm  Nmin  Nmax  R  S  [cap]  [kfrac]
+# Default cap 5e10 (make_tasks_ext.py), early stop after the 70 fastest of 100 seeds.
+# 0. validation: mts4 without settings must reproduce A0 / A2m of run_main line by line
+V0        27  30   10  100
+V2m       27  30   10  100
+# 1. optima reached by the A0 runs (replicates 0-19): degeneracy and symmetry of the optima vs N (odd/even hardness)
+C0        27  42   20  100
+# 2. how to use a seed: k copies of the A2m seed + (100-k) random strings; perturbed copies; same fixes for A3
+M2m_k1    27  42  100  100
+M2m_k10   27  42  100  100
+M2m_k50   27  42  100  100
+P2m_d8    27  42  100  100
+P2m_d4    27  42  100  100
+M3_k1     27  42  100  100
+P3_d8     27  42  100  100
+# 3. robustness to MTS hyperparameters: (random population, replicated A2m seed) pairs
+H0_K50    27  40  100  100
+H2m_K50   27  40  100  100
+H0_K200   27  40  100  100
+H2m_K200  27  40  100  100
+H0_pm2    27  40  100  100
+H2m_pm2   27  40  100  100
+H0_tb2    27  40  100  100
+H2m_tb2   27  40  100  100
+# 4. population-free iterated tabu search from random / A2 / A2m / A3 starts
+I0        27  37  100  100
+I2        27  37  100  100
+I2m       27  37  100  100
+I3        27  37  100  100

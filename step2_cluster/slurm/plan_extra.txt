@@ -1,0 +1,22 @@
+# Extra run (bash slurm/submit_extra.sh), queued behind job 10166.
+#   arm  Nmin  Nmax  R    S    [cap]        [kfrac]
+# N=41, 43, 45: only the replicates where fewer than 70 of 100 runs finished under the old 3e9 cap are rerun
+#               (19_prep_extra.sbatch moves those files aside); the new cap is 5e10.
+#               Runs are deterministic in (arm, N, r, s): the rerun reproduces every finished TTS exactly.
+# N=47:         all replicates, cap 5e10.
+A0     41  41  100  100  50000000000  0.70
+A1     41  41  100  100  50000000000  0.70
+A2     41  41  100  100  50000000000  0.70
+A0     43  43  100  100  50000000000  0.70
+A1     43  43  100  100  50000000000  0.70
+A2     43  43  100  100  50000000000  0.70
+A0     45  45  100  100  50000000000  0.70
+A1     45  45  100  100  50000000000  0.70
+A2     45  45  100  100  50000000000  0.70
+A0     47  47  100  100  50000000000  0.70
+A1     47  47  100  100  50000000000  0.70
+A2     47  47  100  100  50000000000  0.70
+# N=46: normal settings (cap 3e9, kfrac 0.70)
+A0     46  46  100  100
+A1     46  46  100  100
+A2     46  46  100  100

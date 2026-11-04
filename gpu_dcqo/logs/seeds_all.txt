@@ -1,0 +1,28 @@
+merged 5 sizes into seeds_dcqo/seed_stats_dcqo.csv and dcqo_summary.txt
+==> logs/seeds_N27.txt <==
+N=27: 5850 Pauli terms in G, Theta = -0.000967744  (1.6 s)
+N=27: seeds written; mean shot energy 5.834 Eopt, P(opt) 9.00e-07, Q1 seed energy 1.570 Eopt
+
+==> logs/seeds_N28.txt <==
+N=28: 6552 Pauli terms in G, Theta = -0.000935985  (1.9 s)
+N=28: seeds written; mean shot energy 4.634 Eopt, P(opt) 1.80e-06, Q1 seed energy 1.282 Eopt
+
+==> logs/seeds_N29.txt <==
+N=29: 7308 Pauli terms in G, Theta = -0.000906392  (2.3 s)
+N=29: seeds written; mean shot energy 4.003 Eopt, P(opt) 5.00e-07, Q1 seed energy 1.174 Eopt
+
+==> logs/seeds_N30.txt <==
+N=30: 8120 Pauli terms in G, Theta = -0.000878702  (3.0 s)
+N=30: seeds written; mean shot energy 4.496 Eopt, P(opt) 8.00e-07, Q1 seed energy 1.301 Eopt
+
+==> logs/seeds_N31.txt <==
+N=31: 8990 Pauli terms in G, Theta = -0.00085277  (3.6 s)
+N=31: seeds written; mean shot energy 4.220 Eopt, P(opt) 0.00e+00, Q1 seed energy 1.274 Eopt
+
+==> logs/seeds_N32.txt <==
+/home/cyc/software/Large_GPUs/qt_mts/gpu_dcqo/dcqo_seeds.py:144: FutureWarning: The CUDA-Q `sample` and `observe` algorithmic primitives will change in a future release. Existing code may require updates. See https://nvidia.github.io/cuda-quantum/latest/using/migration/upcoming_changes.html for details.
+  import cudaq
+
+==> logs/seeds_N33.txt <==
+/home/cyc/software/Large_GPUs/qt_mts/gpu_dcqo/dcqo_seeds.py:144: FutureWarning: The CUDA-Q `sample` and `observe` algorithmic primitives will change in a future release. Existing code may require updates. See https://nvidia.github.io/cuda-quantum/latest/using/migration/upcoming_changes.html for details.
+  import cudaq

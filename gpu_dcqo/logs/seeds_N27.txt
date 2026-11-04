@@ -1,0 +1,6 @@
+/home/cyc/miniconda3/envs/dsbtn/lib/python3.12/site-packages/cudaq/__init__.py:260: UserWarning: cudaq-logical is in preview. Its APIs, behavior, and documentation may change substantially in upcoming versions.
+  from . import logical  # noqa: F401
+/home/cyc/software/Large_GPUs/qt_mts/gpu_dcqo/dcqo_seeds.py:144: FutureWarning: The CUDA-Q `sample` and `observe` algorithmic primitives will change in a future release. Existing code may require updates. See https://nvidia.github.io/cuda-quantum/latest/using/migration/upcoming_changes.html for details.
+  import cudaq
+N=27: 5850 Pauli terms in G, Theta = -0.000967744  (1.6 s)
+N=27: seeds written; mean shot energy 5.834 Eopt, P(opt) 9.00e-07, Q1 seed energy 1.570 Eopt
